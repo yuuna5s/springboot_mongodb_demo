@@ -23,5 +23,5 @@ public class Person {
     private String phone;
     private String email;
     private List<String> hobbies;
-    private List<Address> addresses;
+    private String addresses;
 }

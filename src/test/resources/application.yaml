@@ -1,0 +1,17 @@
+spring:
+  data:
+    mongodb:
+      authentication-database: "admin"
+      username: "admin"
+      password: "password"
+      host: "localhost"
+      port: 27017
+      database: "spring-data-mongodb-test"
+  mvc:
+    pathmatch:
+      matching-strategy: "ant_path_matcher"
+  servlet:
+    multipart:
+      max-file-size: "256MB"
+      max-request-size: "256MB"
+      enabled: true
