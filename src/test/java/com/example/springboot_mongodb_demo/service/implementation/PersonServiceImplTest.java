@@ -1,5 +1,6 @@
 package com.example.springboot_mongodb_demo.service.implementation;
 
+import com.example.springboot_mongodb_demo.SpringbootMongodbDemoApplication;
 import com.example.springboot_mongodb_demo.collection.Person;
 import com.example.springboot_mongodb_demo.repository.PersonRepo;
 import org.junit.jupiter.api.AfterEach;
@@ -10,17 +11,19 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 
 import static org.mockito.Mockito.verify;
 
 @ExtendWith(MockitoExtension.class)
-class PersonServiceImplTest {
+class PersonServiceImplTest{
 
     @Mock
     private PersonRepo personRepo;
     @InjectMocks
+    @Autowired
     private PersonServiceImpl personService;
     private Person person;
 
